@@ -1,98 +1,28 @@
 // DOM Elements
-const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
-const accordionHeaders = document.querySelectorAll('.accordion-header');
-const faqQuestions = document.querySelectorAll('.faq-question');
+const menuToggle = document.getElementById('menuToggle');
 const backToTop = document.getElementById('backToTop');
+const currentYear = document.getElementById('currentYear');
 
-// Mobile Navigation Toggle
-navToggle.addEventListener('click', () => {
+// Mobile Menu Toggle
+menuToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
-    
-    // Toggle icon
-    const icon = navToggle.querySelector('i');
-    if (navMenu.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-times');
-    } else {
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    }
+    menuToggle.innerHTML = navMenu.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
 });
 
-// Close mobile menu when clicking a link
+// Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
-        const icon = navToggle.querySelector('i');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
-    });
-});
-
-// Accordion functionality
-accordionHeaders.forEach(header => {
-    header.addEventListener('click', () => {
-        const accordionItem = header.parentElement;
-        const accordionContent = header.nextElementSibling;
-        const accordionIcon = header.querySelector('.accordion-icon');
-        
-        // Close other accordion items
-        document.querySelectorAll('.accordion-content').forEach(content => {
-            if (content !== accordionContent && content.classList.contains('active')) {
-                content.classList.remove('active');
-                content.previousElementSibling.querySelector('.accordion-icon').classList.remove('fa-chevron-up');
-                content.previousElementSibling.querySelector('.accordion-icon').classList.add('fa-chevron-down');
-            }
-        });
-        
-        // Toggle current accordion item
-        accordionContent.classList.toggle('active');
-        
-        // Toggle icon
-        if (accordionContent.classList.contains('active')) {
-            accordionIcon.classList.remove('fa-chevron-down');
-            accordionIcon.classList.add('fa-chevron-up');
-        } else {
-            accordionIcon.classList.remove('fa-chevron-up');
-            accordionIcon.classList.add('fa-chevron-down');
-        }
-    });
-});
-
-// FAQ functionality
-faqQuestions.forEach(question => {
-    question.addEventListener('click', () => {
-        const faqItem = question.parentElement;
-        const faqAnswer = question.nextElementSibling;
-        const faqIcon = question.querySelector('.faq-icon');
-        
-        // Close other FAQ items
-        document.querySelectorAll('.faq-answer').forEach(answer => {
-            if (answer !== faqAnswer && answer.classList.contains('active')) {
-                answer.classList.remove('active');
-                answer.previousElementSibling.querySelector('.faq-icon').classList.remove('fa-chevron-up');
-                answer.previousElementSibling.querySelector('.faq-icon').classList.add('fa-chevron-down');
-            }
-        });
-        
-        // Toggle current FAQ item
-        faqAnswer.classList.toggle('active');
-        
-        // Toggle icon
-        if (faqAnswer.classList.contains('active')) {
-            faqIcon.classList.remove('fa-chevron-down');
-            faqIcon.classList.add('fa-chevron-up');
-        } else {
-            faqIcon.classList.remove('fa-chevron-up');
-            faqIcon.classList.add('fa-chevron-down');
-        }
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     });
 });
 
 // Back to Top Button
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
+    if (window.pageYOffset > 300) {
         backToTop.style.display = 'flex';
     } else {
         backToTop.style.display = 'none';
@@ -106,19 +36,42 @@ backToTop.addEventListener('click', () => {
     });
 });
 
-// Smooth scrolling for anchor links
+// FAQ Toggle Function
+function toggleFAQ(questionElement) {
+    const answer = questionElement.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    
+    // Close all FAQ answers
+    document.querySelectorAll('.faq-answer').forEach(item => {
+        item.classList.remove('open');
+    });
+    
+    // Remove active class from all questions
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.classList.remove('active');
+    });
+    
+    // If it wasn't open, open it
+    if (!isOpen) {
+        answer.classList.add('open');
+        questionElement.classList.add('active');
+    }
+}
+
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
+        if (this.getAttribute('href') === '#') return;
+        
         e.preventDefault();
-        
         const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
         const targetElement = document.querySelector(targetId);
+        
         if (targetElement) {
-            const offset = 80; // Account for fixed navbar
+            // Calculate the position to scroll to
+            const headerOffset = 100;
             const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
             
             window.scrollTo({
                 top: offsetPosition,
@@ -129,43 +82,124 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Highlight current section in navigation
-window.addEventListener('scroll', () => {
+function highlightCurrentSection() {
     const sections = document.querySelectorAll('section[id]');
-    const scrollPosition = window.scrollY + 100;
+    const scrollPosition = window.pageYOffset + 150;
+    
+    let currentSectionId = '';
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
+        const sectionHeight = section.clientHeight;
         const sectionId = section.getAttribute('id');
         
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            document.querySelectorAll('.nav-menu a').forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
+            currentSectionId = sectionId;
         }
     });
+    
+    // Update navigation links
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === `#${currentSectionId}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Set current year in footer
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
+
+// Add animation to elements when they come into view
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.addEventListener('DOMContentLoaded', () => {
+    // Observe cards and other elements
+    document.querySelectorAll('.content-card, .feature-card, .achievement-card, .reason-card, .responsibility-card, .method-card').forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Initialize first FAQ as open
+    const firstFAQ = document.querySelector('.faq-question');
+    if (firstFAQ) {
+        toggleFAQ(firstFAQ);
+    }
 });
 
-// Initialize
+// Update section highlighting on scroll
+window.addEventListener('scroll', () => {
+    highlightCurrentSection();
+});
+
+// Initialize section highlighting on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Add active class to first FAQ item
-    if (faqQuestions.length > 0) {
-        const firstFaqAnswer = faqQuestions[0].nextElementSibling;
-        const firstFaqIcon = faqQuestions[0].querySelector('.faq-icon');
-        firstFaqAnswer.classList.add('active');
-        firstFaqIcon.classList.remove('fa-chevron-down');
-        firstFaqIcon.classList.add('fa-chevron-up');
+    highlightCurrentSection();
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
+
+// Keyboard navigation for accessibility
+document.addEventListener('keydown', (e) => {
+    // ESC key closes mobile menu
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     }
     
-    // Add active class to first accordion item
-    if (accordionHeaders.length > 0) {
-        const firstAccordionContent = accordionHeaders[0].nextElementSibling;
-        const firstAccordionIcon = accordionHeaders[0].querySelector('.accordion-icon');
-        firstAccordionContent.classList.add('active');
-        firstAccordionIcon.classList.remove('fa-chevron-down');
-        firstAccordionIcon.classList.add('fa-chevron-up');
+    // Tab key navigation in FAQ
+    if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.classList.contains('faq-question')) {
+            e.preventDefault();
+            toggleFAQ(e.target);
+        }
     }
 });
+
+// Add print styles
+const style = document.createElement('style');
+style.textContent = `
+    @media print {
+        .navbar, .hero, .footer, .back-to-top, .cta-buttons {
+            display: none !important;
+        }
+        
+        .content-card {
+            box-shadow: none !important;
+            border: 1px solid #ddd !important;
+            break-inside: avoid;
+        }
+        
+        .section {
+            margin-bottom: 40px !important;
+        }
+        
+        a {
+            color: #000 !important;
+            text-decoration: underline !important;
+        }
+        
+        .faq-answer {
+            max-height: none !important;
+            display: block !important;
+        }
+    }
+`;
+document.head.appendChild(style);

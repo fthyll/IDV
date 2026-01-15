@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumus Behavior Point - Indo Voice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 12px;">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Indo Voice</span>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#pendahuluan"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="index.html#fitur-utama"><i class="fas fa-star"></i> Fitur</a></li>
+                <li><a href="index.html#cara-bermain"><i class="fas fa-gamepad"></i> Cara Bermain</a></li>
+                <li><a href="index.html#moderasi"><i class="fas fa-shield-alt"></i> Moderasi</a></li>
+                <li><a href="behavior-point.html" class="active"><i class="fas fa-calculator"></i> Rumus BP</a></li>
+                <li><a href="index.html#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Rumus Behavior Point</h1>
+            <p class="subtitle">Sistem Reputasi Pemain di Indo Voice</p>
+            <p class="description">Memahami sistem Behavior Point (BP) untuk menjaga komunitas yang sehat, adil, dan menyenangkan bagi semua pemain.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Sistem Reputasi</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Adil & Transparan</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-heart"></i>
+                    <span>Kesempatan Perbaikan</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Apa itu Behavior Point -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h2 class="section-title">Apa itu Behavior Point?</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="bp-intro">
+                    <div class="bp-badge">
+                        <div class="bp-score">100</div>
+                        <div class="bp-label">BP Awal</div>
+                    </div>
+                    <div class="bp-description">
+                        <p><strong>Behavior Point (BP)</strong> adalah sistem reputasi yang digunakan di Indo Voice untuk mengukur dan mengelola perilaku pemain. Sistem ini dirancang untuk menciptakan lingkungan bermain yang aman, nyaman, dan positif bagi seluruh komunitas.</p>
+                    </div>
+                </div>
+                
+                <div class="bp-key-points">
+                    <div class="key-point">
+                        <div class="key-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="key-content">
+                            <h4>Semua pemain memiliki 100 BP saat pertama kali bermain.</h4>
+                            <p>BP adalah cerminan reputasi awal yang baik bagi setiap pemain baru.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="key-point">
+                        <div class="key-icon">
+                            <i class="fas fa-minus-circle"></i>
+                        </div>
+                        <div class="key-content">
+                            <h4>BP akan berkurang jika pemain melanggar aturan.</h4>
+                            <p>Setiap pelanggaran memiliki nilai pengurangan BP yang berbeda sesuai tingkat keparahannya.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="key-point">
+                        <div class="key-icon">
+                            <i class="fas fa-arrow-up-circle"></i>
+                        </div>
+                        <div class="key-content">
+                            <h4>BP bisa bertambah kembali jika bermain secara aktif dan positif.</h4>
+                            <p>Sistem memberikan kesempatan perbaikan bagi pemain yang ingin memperbaiki reputasinya.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="key-point">
+                        <div class="key-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="key-content">
+                            <h4>Peringatan otomatis dan sanksi.</h4>
+                            <p>Pemain yang BP-nya rendah akan mendapatkan peringatan otomatis, dan jika BP habis, dapat terkena banned.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pengurangan BP -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <h2 class="section-title">Pengurangan BP Berdasarkan Pelanggaran</h2>
+            </div>
+            
+            <div class="content-card">
+                <p class="section-intro">Berikut adalah daftar lengkap pelanggaran dan pengurangan Behavior Point yang berlaku di Indo Voice:</p>
+                
+                <!-- Pelanggaran Ringan -->
+                <div class="violation-category">
+                    <div class="category-header ringan">
+                        <h3><i class="fas fa-exclamation-circle"></i> Pelanggaran Ringan</h3>
+                        <span class="category-badge">Pengurangan 5-10 BP</span>
+                    </div>
+                    
+                    <div class="violation-table">
+                        <div class="table-header">
+                            <div class="col-example">Contoh Pelanggaran</div>
+                            <div class="col-bp">Pengurangan BP</div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Mengetik chat spam atau berulang</h4>
+                                <p>Mengirim pesan yang sama berulang kali dalam waktu singkat</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">5</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Spam emote/tool tanpa tujuan jelas</h4>
+                                <p>Menggunakan emote atau tool secara berlebihan dan mengganggu</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">5</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Menyamar sebagai moderator secara bercanda</h4>
+                                <p>Berpura-pura menjadi moderator tanpa maksud serius</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">10</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Provokasi atau sindiran tajam (secara tidak langsung)</h4>
+                                <p>Menyindir pemain lain tanpa menyebut nama langsung</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">10</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Membuat suara aneh/mengejek secara bercanda</h4>
+                                <p>Mengejek pemain lain dengan suara atau efek suara</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">10</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Mengeluarkan suara berisik dari lingkungan sekitar dengan sengaja</h4>
+                                <p>Memperdengarkan suara lingkungan yang mengganggu</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">10</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Suara terlalu keras/tidak nyaman (berteriak, suara mengganggu lainnya)</h4>
+                                <p>Volume suara yang berlebihan dan mengganggu kenyamanan</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">10</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pelanggaran Sedang -->
+                <div class="violation-category">
+                    <div class="category-header sedang">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Pelanggaran Sedang</h3>
+                        <span class="category-badge">Pengurangan 20-30 BP</span>
+                    </div>
+                    
+                    <div class="violation-table">
+                        <div class="table-header">
+                            <div class="col-example">Contoh Pelanggaran</div>
+                            <div class="col-bp">Pengurangan BP</div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Mengikuti atau mengintai pemain secara terus-menerus tanpa izin hingga menimbulkan rasa terganggu</h4>
+                                <p>Mengikuti pemain lain secara tidak wajar dan mengganggu</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Provokasi atau sindiran tajam (secara langsung)</h4>
+                                <p>Menghina atau memprovokasi pemain lain secara terang-terangan</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Meminta hadiah/Robux secara agresif</h4>
+                                <p>Memaksa pemain lain untuk memberikan hadiah atau Robux</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Menggunakan voice changer suara hingga menimbulkan rasa tidak nyaman pada pemain lain</h4>
+                                <p>Mengubah suara dengan alat hingga mengganggu pemain lain</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Mengabaikan instruksi moderator secara langsung</h4>
+                                <p>Tidak mematuhi peringatan atau instruksi dari moderator</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Menggunakan username/display name/name tag tidak pantas secara halus</h4>
+                                <p>Nama pengguna yang tidak pantas meskipun tidak vulgar</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">20</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Mengucapkan kata-kata kasar yang berlebihan</h4>
+                                <p>Penggunaan kata-kata kasar secara berulang dan berlebihan</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pelanggaran Berat -->
+                <div class="violation-category">
+                    <div class="category-header berat">
+                        <h3><i class="fas fa-skull-crossbones"></i> Pelanggaran Berat</h3>
+                        <span class="category-badge">Pengurangan 50-100 BP</span>
+                    </div>
+                    
+                    <div class="violation-table">
+                        <div class="table-header">
+                            <div class="col-example">Contoh Pelanggaran</div>
+                            <div class="col-bp">Pengurangan BP</div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Meniru identitas pemain lain dengan mencemarkan nama baiknya</h4>
+                                <p>Menyamar sebagai pemain lain untuk tujuan negatif</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">50</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Mengucapkan kata-kata kasar di chat</h4>
+                                <p>Menggunakan kata-kata kasar dalam pesan teks</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">50</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Membuat rumor, fitnah, atau klaim palsu</h4>
+                                <p>Menyebarkan informasi palsu tentang pemain lain</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">50</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Menyinggung SARA secara tidak langsung atau bercanda</h4>
+                                <p>Komentar yang menyinggung suku, agama, ras, atau antar golongan</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">50</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Ujaran kebencian atau penghinaan berdasarkan ras/agama/gender</h4>
+                                <p>Komentar rasis, seksis, atau diskriminatif</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">50</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Menggunakan avatar vulgar</h4>
+                                <p>Avatar dengan konten yang tidak pantas atau vulgar</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">50</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Menyebarkan informasi pribadi pemain lain/Doxing</h4>
+                                <p>Membocorkan informasi pribadi pemain lain tanpa izin</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="bp-deduction">100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pelanggaran Sangat Berat -->
+                <div class="violation-category">
+                    <div class="category-header sangat-berat">
+                        <h3><i class="fas fa-ban"></i> Pelanggaran Sangat Berat</h3>
+                        <span class="category-badge">Ban Permanen</span>
+                    </div>
+                    
+                    <div class="violation-table">
+                        <div class="table-header">
+                            <div class="col-example">Contoh Pelanggaran</div>
+                            <div class="col-bp">Sanksi</div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Pelecehan seksual melalui voice/chat</h4>
+                                <p>Komentar atau perilaku seksual yang tidak pantas</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="ban-badge">Ban Permanen</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Cheat/Exploit</h4>
+                                <p>Menggunakan cheat, exploit, atau modifikasi game ilegal</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="ban-badge">Ban Permanen</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Menggunakan emote, atau tool dengan maksud yang vulgar</h4>
+                                <p>Menyalahgunakan fitur game untuk konten vulgar</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="ban-badge">Ban Permanen</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Memanipulasi sistem moderasi atau warning (termasuk alting)</h4>
+                                <p>Mencoba memanipulasi sistem moderasi atau menggunakan akun alternatif untuk menghindari sanksi</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="ban-badge">Ban Permanen</span>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row">
+                            <div class="col-example">
+                                <h4>Menyamar sebagai moderator secara serius</h4>
+                                <p>Berpura-pura menjadi moderator dengan tujuan menipu pemain lain</p>
+                            </div>
+                            <div class="col-bp">
+                                <span class="ban-badge">Ban Permanen</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Catatan BP 0 -->
+                <div class="warning-box">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div class="warning-content">
+                        <h4>Perhatian: Jika BP mencapai 0</h4>
+                        <p>Jika BP mencapai 0, pemain akan terkena ban selama 7 hari, dan setelah itu BP akan direset ke 30.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peringatan & Sistem Warning -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h2 class="section-title">Peringatan & Sistem Warning</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="warning-system">
+                    <div class="warning-info">
+                        <div class="warning-icon">
+                            <i class="fas fa-comment-exclamation"></i>
+                        </div>
+                        <div class="warning-details">
+                            <h3>Sistem Peringatan Moderator</h3>
+                            <p>Moderator dapat memberikan warning langsung kepada pemain yang tertangkap melakukan pelanggaran.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="warning-points">
+                        <div class="warning-point">
+                            <i class="fas fa-hand-point-right"></i>
+                            <p><strong>Warning tidak selalu berarti pemain bersalah</strong> - sistem moderasi terbuka terhadap klarifikasi dan banding.</p>
+                        </div>
+                        
+                        <div class="warning-point">
+                            <i class="fas fa-hand-point-right"></i>
+                            <p><strong>Setiap warning dapat mengurangi BP</strong> sesuai jenis pelanggarannya.</p>
+                        </div>
+                        
+                        <div class="warning-point">
+                            <i class="fas fa-hand-point-right"></i>
+                            <p>Pemain memiliki hak untuk mengajukan banding jika merasa warning tidak sesuai.</p>
+                        </div>
+                        
+                        <div class="warning-point">
+                            <i class="fas fa-hand-point-right"></i>
+                            <p>Warning bersifat edukatif - tujuannya adalah mengingatkan, bukan hanya menghukum.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="appeal-note">
+                        <i class="fas fa-balance-scale"></i>
+                        <div class="note-content">
+                            <h4>Proses Banding</h4>
+                            <p>Jika kamu merasa mendapat warning yang tidak sesuai, kamu dapat mengajukan banding melalui Discord resmi Indo Voice. Semua banding akan ditinjau ulang oleh tim moderasi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pemulihan BP -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h2 class="section-title">Pemulihan BP</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="recovery-system">
+                    <div class="recovery-header">
+                        <h3>Sistem Pemulihan Behavior Point</h3>
+                        <p>Indo Voice memberikan kesempatan kepada pemain untuk memperbaiki reputasinya melalui sistem pemulihan BP.</p>
+                    </div>
+                    
+                    <div class="recovery-rules">
+                        <div class="recovery-rule">
+                            <div class="rule-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>+1 BP per Jam Bermain Aktif</h4>
+                                <p>Pemain dengan BP di bawah 90 akan mendapatkan <strong>+1 BP setiap 1 jam bermain aktif</strong>.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="recovery-rule">
+                            <div class="rule-icon">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>Batas Harian</h4>
+                                <p>Maksimal pemulihan adalah <strong>6 BP per hari</strong> (setara dengan 6 jam bermain aktif).</p>
+                            </div>
+                        </div>
+                        
+                        <div class="recovery-rule">
+                            <div class="rule-icon">
+                                <i class="fas fa-pause-circle"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>Jeda Pemulihan</h4>
+                                <p>Jika melakukan pelanggaran hari itu, <strong>pengumpulan BP akan dijeda hingga hari berikutnya</strong>.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="recovery-rule">
+                            <div class="rule-icon">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="rule-content">
+                                <h4>Bermain Aktif</h4>
+                                <p>"Bermain aktif" berarti berpartisipasi dalam interaksi sosial, bukan sekadar AFK (Away From Keyboard).</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="recovery-example">
+                        <h4>Contoh Kasus Pemulihan:</h4>
+                        <div class="example-case">
+                            <div class="case-step">
+                                <div class="step-indicator">1</div>
+                                <div class="step-content">
+                                    <p>Pemain A memiliki BP 75 (di bawah 90)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="case-step">
+                                <div class="step-indicator">2</div>
+                                <div class="step-content">
+                                    <p>Pemain A bermain aktif selama 3 jam hari ini</p>
+                                </div>
+                            </div>
+                            
+                            <div class="case-step">
+                                <div class="step-indicator">3</div>
+                                <div class="step-content">
+                                    <p>BP meningkat menjadi 78 (+3 BP)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="case-step">
+                                <div class="step-indicator">4</div>
+                                <div class="step-content">
+                                    <p>Jika bermain 6 jam total hari ini, BP akan menjadi 81 (+6 BP, maksimal harian)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visibilitas BP -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2 class="section-title">Visibilitas BP</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="visibility-system">
+                    <p>Behavior Point memiliki tingkat visibilitas yang berbeda bagi pemain lain, tergantung pada nilai BP kamu:</p>
+                    
+                    <div class="visibility-levels">
+                        <div class="visibility-level high">
+                            <div class="vis-header">
+                                <i class="fas fa-eye"></i>
+                                <h3>BP ≥ 90</h3>
+                            </div>
+                            <div class="vis-content">
+                                <p><strong>Angka BP terlihat secara penuh</strong> bagi pemain lain</p>
+                                <p class="vis-desc">Menandakan reputasi yang baik dan konsisten dalam mematuhi aturan komunitas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="visibility-level low">
+                            <div class="vis-header">
+                                <i class="fas fa-eye-slash"></i>
+                                <h3>BP < 90</h3>
+                            </div>
+                            <div class="vis-content">
+                                <p><strong>Hanya tampil sebagai "&lt;90"</strong> bagi pemain lain</p>
+                                <p class="vis-desc">Menandakan perlu perbaikan reputasi. Nilai sebenarnya hanya terlihat oleh sistem dan moderator.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="visibility-note">
+                        <i class="fas fa-info-circle"></i>
+                        <div class="note-content">
+                            <h4>Mengapa Ada Visibilitas Berbeda?</h4>
+                            <p>Sistem visibilitas ini dirancang untuk melindungi privasi pemain sekaligus memberikan informasi yang diperlukan tentang reputasi pemain. Pemain dengan reputasi baik (BP ≥ 90) dapat membangun kepercayaan dengan menampilkan BP mereka secara penuh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filosofi Sistem -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h2 class="section-title">Filosofi Sistem Behavior Point</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="philosophy-content">
+                    <div class="philosophy-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Sistem punishment di Indo Voice tidak hanya memberi sanksi, tapi juga memberi ruang perbaikan. Tujuannya adalah menciptakan lingkungan bermain yang adil, sehat, dan menyenangkan untuk semua.</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    
+                    <div class="philosophy-principles">
+                        <div class="principle">
+                            <div class="principle-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="principle-content">
+                                <h4>Edukasi, Bukan Hanya Hukuman</h4>
+                                <p>Sistem BP dirancang untuk mendidik pemain tentang perilaku yang baik dalam komunitas, bukan sekadar menghukum kesalahan.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="principle">
+                            <div class="principle-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="principle-content">
+                                <h4>Kesempatan Kedua</h4>
+                                <p>Setiap pemain mendapat kesempatan untuk memperbaiki kesalahan dan meningkatkan reputasinya melalui sistem pemulihan BP.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="principle">
+                            <div class="principle-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="principle-content">
+                                <h4>Keadilan dan Transparansi</h4>
+                                <p>Setiap pengurangan BP memiliki alasan yang jelas dan dapat dipertanggungjawabkan, dengan mekanisme banding yang adil.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="principle">
+                            <div class="principle-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="principle-content">
+                                <h4>Komunitas yang Sehat</h4>
+                                <p>Tujuan akhir adalah membangun komunitas yang saling menghargai, mendukung, dan menciptakan pengalaman bermain yang positif.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="philosophy-cta">
+                        <div class="cta-content">
+                            <h3>Bermainlah dengan Bijak!</h3>
+                            <p>Ingat, Behavior Point bukan hanya angka - itu adalah cerminan bagaimana kamu berkontribusi pada komunitas Indo Voice. Bermainlah dengan sopan, hormati pemain lain, dan jadilah bagian dari komunitas yang positif!</p>
+                        </div>
+                        <div class="cta-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator BP -->
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-calculator"></i>
+                </div>
+                <h2 class="section-title">Kalkulator BP</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="bp-calculator">
+                    <div class="calculator-header">
+                        <h3>Simulasi Behavior Point</h3>
+                        <p>Coba simulasi bagaimana pelanggaran dan pemulihan mempengaruhi BP kamu.</p>
+                    </div>
+                    
+                    <div class="calculator-controls">
+                        <div class="control-group">
+                            <label for="currentBP">BP Saat Ini:</label>
+                            <input type="number" id="currentBP" min="0" max="100" value="100">
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="violationType">Jenis Pelanggaran:</label>
+                            <select id="violationType">
+                                <option value="">Pilih jenis pelanggaran</option>
+                                <option value="5">Ringan (-5 BP)</option>
+                                <option value="10">Ringan (-10 BP)</option>
+                                <option value="20">Sedang (-20 BP)</option>
+                                <option value="30">Sedang (-30 BP)</option>
+                                <option value="50">Berat (-50 BP)</option>
+                                <option value="100">Berat (-100 BP)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="playHours">Jam Bermain Aktif (Hari Ini):</label>
+                            <input type="number" id="playHours" min="0" max="24" value="0">
+                        </div>
+                        
+                        <button id="calculateBtn" class="btn btn-primary">
+                            <i class="fas fa-calculator"></i> Hitung BP
+                        </button>
+                        
+                        <button id="resetBtn" class="btn btn-secondary">
+                            <i class="fas fa-redo"></i> Reset
+                        </button>
+                    </div>
+                    
+                    <div class="calculator-results" id="results">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <h4>Hasil Simulasi</h4>
+                            </div>
+                            <div class="result-content">
+                                <div class="result-item">
+                                    <span class="result-label">BP Awal:</span>
+                                    <span class="result-value" id="initialBP">100</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Pengurangan BP:</span>
+                                    <span class="result-value" id="deductionBP">0</span>
+                                </div>
+                                <div class="result-item">
+                                    <span class="result-label">Pemulihan BP:</span>
+                                    <span class="result-value" id="recoveryBP">0</span>
+                                </div>
+                                <div class="result-item total">
+                                    <span class="result-label">BP Akhir:</span>
+                                    <span class="result-value" id="finalBP">100</span>
+                                </div>
+                                <div class="result-status" id="statusMessage">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Reputasi Baik</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="calculator-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p><strong>Catatan:</strong> Kalkulator ini hanya simulasi. Perhitungan sebenarnya di game mungkin memiliki faktor tambahan yang tidak termasuk dalam simulasi ini.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigasi -->
+        <section class="section">
+            <div class="content-card">
+                <div class="navigation-links">
+                    <h3>Terkait Behavior Point</h3>
+                    <div class="nav-links-grid">
+                        <a href="index.html#moderasi" class="nav-link">
+                            <i class="fas fa-shield-alt"></i>
+                            <div class="nav-content">
+                                <h4>Sistem Moderasi</h4>
+                                <p>Pelajari tentang sistem moderasi di Indo Voice</p>
+                            </div>
+                        </a>
+                        
+                        <a href="index.html#faq" class="nav-link">
+                            <i class="fas fa-question-circle"></i>
+                            <div class="nav-content">
+                                <h4>FAQ</h4>
+                                <p>Pertanyaan umum tentang Indo Voice</p>
+                            </div>
+                        </a>
+                        
+                        <a href="index.html#etika" class="nav-link">
+                            <i class="fas fa-handshake"></i>
+                            <div class="nav-content">
+                                <h4>Etika Bermain</h4>
+                                <p>Pedoman perilaku di komunitas Indo Voice</p>
+                            </div>
+                        </a>
+                        
+                        <a href="index.html#cara-bermain" class="nav-link">
+                            <i class="fas fa-gamepad"></i>
+                            <div class="nav-content">
+                                <h4>Cara Bermain</h4>
+                                <p>Panduan lengkap bermain Indo Voice</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-microphone-alt"></i>
+                <span>Indo Voice</span>
+            </div>
+            <p class="footer-description">Sistem Behavior Point - Menjaga komunitas yang sehat dan positif</p>
+            
+            <div class="footer-info">
+                <div class="info-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <p>Sistem yang adil dan transparan</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-heart"></i>
+                    <p>Memberi kesempatan perbaikan</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-users"></i>
+                    <p>Untuk kenyamanan seluruh komunitas</p>
+                </div>
+            </div>
+            
+            <div class="footer-credits">
+                <p>© <span id="currentYear"></span> Indo Voice. Semua hak dilindungi.</p>
+                <p class="credit-note">Bermainlah dengan bijak dan hormati pemain lain!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // BP Calculator Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentBP = document.getElementById('currentBP');
+            const violationType = document.getElementById('violationType');
+            const playHours = document.getElementById('playHours');
+            const calculateBtn = document.getElementById('calculateBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            
+            const initialBP = document.getElementById('initialBP');
+            const deductionBP = document.getElementById('deductionBP');
+            const recoveryBP = document.getElementById('recoveryBP');
+            const finalBP = document.getElementById('finalBP');
+            const statusMessage = document.getElementById('statusMessage');
+            
+            // Set current year
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Calculate function
+            calculateBtn.addEventListener('click', function() {
+                let bp = parseInt(currentBP.value) || 100;
+                const violation = parseInt(violationType.value) || 0;
+                const hours = parseInt(playHours.value) || 0;
+                
+                // Store initial BP
+                const startBP = bp;
+                
+                // Calculate deduction
+                let deduction = 0;
+                if (violation > 0) {
+                    deduction = Math.min(violation, bp);
+                    bp = Math.max(0, bp - violation);
+                }
+                
+                // Calculate recovery (only if BP < 90)
+                let recovery = 0;
+                if (bp < 90) {
+                    // Max 6 BP per day, 1 BP per hour
+                    recovery = Math.min(hours, 6);
+                    // Cap at 89
+                    recovery = Math.min(recovery, 89 - bp);
+                    bp += recovery;
+                }
+                
+                // Update display
+                initialBP.textContent = startBP;
+                deductionBP.textContent = `-${deduction}`;
+                deductionBP.style.color = deduction > 0 ? '#e74c3c' : '#333';
+                recoveryBP.textContent = recovery > 0 ? `+${recovery}` : '0';
+                recoveryBP.style.color = recovery > 0 ? '#2ecc71' : '#333';
+                finalBP.textContent = bp;
+                
+                // Update status message
+                const statusIcon = statusMessage.querySelector('i');
+                const statusText = statusMessage.querySelector('span');
+                
+                if (bp <= 0) {
+                    statusIcon.className = 'fas fa-ban';
+                    statusIcon.style.color = '#e74c3c';
+                    statusText.textContent = 'Banned (7 hari)';
+                    statusText.style.color = '#e74c3c';
+                } else if (bp < 50) {
+                    statusIcon.className = 'fas fa-exclamation-triangle';
+                    statusIcon.style.color = '#f39c12';
+                    statusText.textContent = 'Peringatan Serius';
+                    statusText.style.color = '#f39c12';
+                } else if (bp < 75) {
+                    statusIcon.className = 'fas fa-exclamation-circle';
+                    statusIcon.style.color = '#f1c40f';
+                    statusText.textContent = 'Perlu Perbaikan';
+                    statusText.style.color = '#f1c40f';
+                } else if (bp < 90) {
+                    statusIcon.className = 'fas fa-info-circle';
+                    statusIcon.style.color = '#3498db';
+                    statusText.textContent = 'Cukup Baik';
+                    statusText.style.color = '#3498db';
+                } else {
+                    statusIcon.className = 'fas fa-check-circle';
+                    statusIcon.style.color = '#2ecc71';
+                    statusText.textContent = 'Reputasi Baik';
+                    statusText.style.color = '#2ecc71';
+                }
+                
+                // Show results
+                document.getElementById('results').style.display = 'block';
+            });
+            
+            // Reset function
+            resetBtn.addEventListener('click', function() {
+                currentBP.value = 100;
+                violationType.value = '';
+                playHours.value = 0;
+                document.getElementById('results').style.display = 'none';
+            });
+            
+            // Mobile menu functionality (reuse from main script)
+            const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.getElementById('menuToggle');
+            
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                    menuToggle.innerHTML = navMenu.classList.contains('active') 
+                        ? '<i class="fas fa-times"></i>' 
+                        : '<i class="fas fa-bars"></i>';
+                });
+            }
+            
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('.nav-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    if (menuToggle) {
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                });
+            });
+            
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.style.display = 'flex';
+                } else {
+                    backToTop.style.display = 'none';
+                }
+            });
+            
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        const headerOffset = 100;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
