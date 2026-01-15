@@ -129,7 +129,17 @@ p {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), #404EED);
+    background: 
+        linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("./img/idv-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: white;
     padding: 100px 20px 80px;
     text-align: center;
@@ -137,6 +147,7 @@ p {
     position: relative;
     overflow: hidden;
 }
+
 
 .hero::before {
     content: '';
@@ -2931,156 +2942,6 @@ p {
     opacity: 0.3;
 }
 
-/* BP Calculator */
-.bp-calculator {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.calculator-header {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid var(--border-color);
-}
-
-.calculator-header h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
-.calculator-controls {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px;
-    background: #f8f9fa;
-    border-radius: var(--border-radius);
-}
-
-.control-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.control-group label {
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.control-group input,
-.control-group select {
-    padding: 12px 15px;
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius-sm);
-    font-size: 1rem;
-    transition: var(--transition);
-}
-
-.control-group input:focus,
-.control-group select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.1);
-}
-
-.calculator-controls .btn {
-    align-self: end;
-}
-
-.calculator-results {
-    display: none;
-}
-
-.result-card {
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    border: 2px solid var(--primary-color);
-}
-
-.result-header {
-    background: var(--primary-color);
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.result-header h4 {
-    margin: 0;
-    color: white;
-}
-
-.result-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.result-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.result-item:last-child {
-    border-bottom: none;
-}
-
-.result-item.total {
-    border-top: 2px solid var(--primary-color);
-    border-bottom: none;
-    margin-top: 10px;
-    padding-top: 20px;
-}
-
-.result-label {
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.result-value {
-    font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--primary-color);
-}
-
-.result-status {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px;
-    background: #f0f7ff;
-    border-radius: var(--border-radius-sm);
-    margin-top: 10px;
-}
-
-.result-status i {
-    font-size: 1.5rem;
-}
-
-.calculator-note {
-    background: #fff9e6;
-    padding: 20px;
-    border-radius: var(--border-radius-sm);
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    border-left: 4px solid #f1c40f;
-}
-
-.calculator-note i {
-    color: #f1c40f;
-    font-size: 1.5rem;
-    margin-top: 3px;
-}
-
 /* Navigation Links */
 .navigation-links {
     text-align: center;
@@ -3223,3 +3084,4 @@ p {
         gap: 15px;
     }
 }
+
