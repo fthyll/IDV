@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Pencapaian - Indo Voice</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./achievements.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-microphone-alt"></i>
+                <span>Indo Voice</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#pendahuluan"><i class="fas fa-home"></i> Beranda</a></li>
+                <li><a href="index.html#sejarah"><i class="fas fa-history"></i> Sejarah</a></li>
+                <li><a href="index.html#cara-bermain"><i class="fas fa-gamepad"></i> Cara Bermain</a></li>
+                <li><a href="bp-calculator.html"><i class="fas fa-calculator"></i> Rumus BP</a></li>
+                <li><a href="achievements.html"><i class="fas fa-trophy"></i> Pencapaian</a></li>
+                <li><a href="index.html#moderasi"><i class="fas fa-shield-alt"></i> Moderasi</a></li>
+                <li><a href="index.html#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="gallery-hero">
+        <div class="hero-content">
+            <h1><i class="fas fa-images"></i> Galeri Pencapaian</h1>
+            <p class="subtitle">Koleksi Lengkap Achievement Indo Voice</p>
+            <p class="description">Lihat semua achievement yang tersedia dengan gambar visual yang menarik</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="gallery-container">
+        <!-- Filter Buttons -->
+        <section class="gallery-filter">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-layer-group"></i>
+                    <span>Semua</span>
+                </button>
+                <button class="filter-btn" data-filter="playtime">
+                    <i class="fas fa-clock"></i>
+                    <span>Play Time</span>
+                </button>
+                <button class="filter-btn" data-filter="love">
+                    <i class="fas fa-heart"></i>
+                    <span>Love</span>
+                </button>
+                <button class="filter-btn" data-filter="donation">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <span>Donation</span>
+                </button>
+                <button class="filter-btn" data-filter="gift">
+                    <i class="fas fa-gift"></i>
+                    <span>Gift</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Achievement Gallery -->
+        <section class="achievement-gallery">
+            <!-- Play Time Achievements -->
+            <div class="gallery-section active" id="playtime-section">
+                <h2 class="section-title">
+                    <i class="fas fa-clock"></i>
+                    <span>🕒 Play Time Achievements</span>
+                </h2>
+                <p class="section-description">Achievement berdasarkan total waktu bermain</p>
+                
+                <div class="gallery-grid">
+                    <!-- Stranger -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Stranger Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge beginner">Tier 1</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Stranger</h3>
+                            <p class="achievement-desc">Pemain baru yang mulai petualangan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>0 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-award"></i>
+                                <span>Badge Pemula</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newcomer -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135759.png" alt="Newcomer Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge beginner">Tier 2</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Newcomer</h3>
+                            <p class="achievement-desc">Mulai terbiasa dengan dunia Indo Voice</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>1 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-medal"></i>
+                                <span>100 XP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Adapted -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Adapted Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge intermediate">Tier 3</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Adapted</h3>
+                            <p class="achievement-desc">Sudah beradaptasi dengan lingkungan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>5 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-coins"></i>
+                                <span>500 XP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experienced -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135784.png" alt="Experienced Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge intermediate">Tier 4</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Experienced</h3>
+                            <p class="achievement-desc">Pengalaman mulai bertambah</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>15 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-star"></i>
+                                <span>Title: Experienced</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Senior -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="Senior Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge advanced">Tier 5</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Senior</h3>
+                            <p class="achievement-desc">Pemain senior dengan pengalaman cukup</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>30 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-crown"></i>
+                                <span>Title: Senior</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Master -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135793.png" alt="Master Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge advanced">Tier 6</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Master</h3>
+                            <p class="achievement-desc">Master dalam dunia Indo Voice</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>60 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-gem"></i>
+                                <span>Title: Master</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elder -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135775.png" alt="Elder Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge expert">Tier 7</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Elder</h3>
+                            <p class="achievement-desc">Elder dengan kebijaksanaan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>120 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-gem"></i>
+                                <span>Title: Elder</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Legend -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135750.png" alt="Legend Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge expert">Tier 8</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Legend</h3>
+                            <p class="achievement-desc">Legenda yang dikenal banyak pemain</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>240 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-gem"></i>
+                                <span>Title: Legend</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supreme -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135815.png" alt="Supreme Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge master">Tier 9</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Supreme</h3>
+                            <p class="achievement-desc">Tingkat tertinggi sebelum immortal</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>480 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-gem"></i>
+                                <span>Title: Supreme</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Immortal -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135761.png" alt="Immortal Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge master">Tier 10</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Immortal</h3>
+                            <p class="achievement-desc">Abadi dalam sejarah Indo Voice</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>960 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura immortal">Immortal Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mythical -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135799.png" alt="Mythical Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge legendary">Tier 11</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Mythical</h3>
+                            <p class="achievement-desc">Makhluk mitos dalam dunia game</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>1920 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura mythical">Mythical Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transcendent -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135812.png" alt="Transcendent Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge legendary">Tier 12</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Transcendent</h3>
+                            <p class="achievement-desc">Melampaui batas manusia biasa</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>3840 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura transcendent">Transcendent Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Eternal -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Eternal Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge godlike">Tier 13</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Eternal</h3>
+                            <p class="achievement-desc">Keabadian dalam dunia virtual</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>7680 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura eternal">Eternal Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Omnipotent -->
+                    <div class="achievement-card" data-category="playtime">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135807.png" alt="Omnipotent Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge godlike">Tier 14</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Omnipotent</h3>
+                            <p class="achievement-desc">Maha Kuasa dalam Indo Voice</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>12000 jam bermain</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura omnipotent">Omnipotent Aura</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Love Achievements -->
+            <div class="gallery-section" id="love-section">
+                <h2 class="section-title">
+                    <i class="fas fa-heart"></i>
+                    <span>❤️ Love Achievements</span>
+                </h2>
+                <p class="section-description">Achievement berdasarkan jumlah likes/disukai</p>
+                
+                <div class="gallery-grid">
+                    <!-- Companion -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Companion Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge beginner">Tier 1</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Companion</h3>
+                            <p class="achievement-desc">Teman yang disukai</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>10 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-award"></i>
+                                <span>Badge Companion</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loved -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135759.png" alt="Loved Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge beginner">Tier 2</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Loved</h3>
+                            <p class="achievement-desc">Dicintai oleh komunitas</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>50 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-medal"></i>
+                                <span>Title: Loved</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Famous -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Famous Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge intermediate">Tier 3</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Famous</h3>
+                            <p class="achievement-desc">Mulai terkenal di komunitas</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>100 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-crown"></i>
+                                <span>Title: Famous</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Influence -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135784.png" alt="Influence Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge intermediate">Tier 4</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Influence</h3>
+                            <p class="achievement-desc">Memiliki pengaruh di komunitas</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>500 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-gem"></i>
+                                <span>Title: Influence</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Celebrity -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="Celebrity Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge advanced">Tier 5</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Celebrity</h3>
+                            <p class="achievement-desc">Selebriti dalam Indo Voice</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>1000 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-gem"></i>
+                                <span>Title: Celebrity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Superstar -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135793.png" alt="Superstar Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge expert">Tier 6</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Superstar</h3>
+                            <p class="achievement-desc">Bintang paling terang</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>5000 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura superstar">Superstar Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Megastar -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135775.png" alt="Megastar Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge expert">Tier 7</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Megastar</h3>
+                            <p class="achievement-desc">Bintang raksasa komunitas</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>10000 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura megastar">Megastar Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Starlight -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135750.png" alt="Starlight Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge master">Tier 8</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Starlight</h3>
+                            <p class="achievement-desc">Cahaya bintang abadi</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>50000 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura starlight">Starlight Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luminary -->
+                    <div class="achievement-card" data-category="love">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135815.png" alt="Luminary Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge legendary">Tier 9</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Luminary</h3>
+                            <p class="achievement-desc">Sumber cahaya komunitas</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>100000 disukai</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura luminary">Luminary Aura</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donation Achievements -->
+            <div class="gallery-section" id="donation-section">
+                <h2 class="section-title">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <span>💸 Donation Achievements</span>
+                </h2>
+                <p class="section-description">Achievement berdasarkan total robux yang didonasikan</p>
+                
+                <div class="gallery-grid">
+                    <!-- Spark -->
+                    <div class="achievement-card" data-category="donation">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Spark Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge beginner">Tier 1</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Spark</h3>
+                            <p class="achievement-desc">Percikan awal kebaikan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>100 robux donasi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-award"></i>
+                                <span>Badge Spark</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="achievement-card" data-category="donation">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135759.png" alt="Support Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge beginner">Tier 2</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Support</h3>
+                            <p class="achievement-desc">Pendukung setia</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>500 robux donasi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-medal"></i>
+                                <span>Title: Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Catalyze -->
+                    <div class="achievement-card" data-category="donation">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Catalyze Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge intermediate">Tier 3</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Catalyze</h3>
+                            <p class="achievement-desc">Katalisator perubahan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>1000 robux donasi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-crown"></i>
+                                <span>Title: Catalyze</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Invigorate -->
+                    <div class="achievement-card" data-category="donation">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135784.png" alt="Invigorate Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge intermediate">Tier 4</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Invigorate</h3>
+                            <p class="achievement-desc">Pemberi semangat</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>5000 robux donasi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-gem"></i>
+                                <span>Title: Invigorate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vitalize -->
+                    <div class="achievement-card" data-category="donation">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="Vitalize Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge advanced">Tier 5</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Vitalize</h3>
+                            <p class="achievement-desc">Pemberi kehidupan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>10000 robux donasi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura vitalize">Vitalize Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Empower -->
+                    <div class="achievement-card" data-category="donation">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135793.png" alt="Empower Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge expert">Tier 6</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Empower</h3>
+                            <p class="achievement-desc">Pemberdaya komunitas</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>50000 robux donasi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura empower">Empower Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sovereign -->
+                    <div class="achievement-card" data-category="donation">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135775.png" alt="Sovereign Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge master">Tier 7</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Sovereign</h3>
+                            <p class="achievement-desc">Pemimpin dalam berbagi</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>100000 robux donasi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura sovereign">Sovereign Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- King -->
+                    <div class="achievement-card" data-category="donation">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135750.png" alt="King Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge legendary">Tier 8</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">King</h3>
+                            <p class="achievement-desc">Raja dalam kedermawanan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>500000 robux donasi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura king">King Aura</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gift Achievements -->
+            <div class="gallery-section" id="gift-section">
+                <h2 class="section-title">
+                    <i class="fas fa-gift"></i>
+                    <span>🎁 Gift Achievements</span>
+                </h2>
+                <p class="section-description">Achievement berdasarkan total robux yang diberikan</p>
+                
+                <div class="gallery-grid">
+                    <!-- Giver -->
+                    <div class="achievement-card" data-category="gift">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Giver Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge beginner">Tier 1</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Giver</h3>
+                            <p class="achievement-desc">Pemberi hadiah pertama</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>100 robux diberi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-award"></i>
+                                <span>Badge Giver</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kind -->
+                    <div class="achievement-card" data-category="gift">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135759.png" alt="Kind Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge beginner">Tier 2</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Kind</h3>
+                            <p class="achievement-desc">Baik hati dalam memberi</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>500 robux diberi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-medal"></i>
+                                <span>Title: Kind</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charitable -->
+                    <div class="achievement-card" data-category="gift">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Charitable Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge intermediate">Tier 3</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Charitable</h3>
+                            <p class="achievement-desc">Dermawan sejati</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>1000 robux diberi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-crown"></i>
+                                <span>Title: Charitable</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generous -->
+                    <div class="achievement-card" data-category="gift">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135784.png" alt="Generous Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge intermediate">Tier 4</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Generous</h3>
+                            <p class="achievement-desc">Sangat dermawan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>5000 robux diberi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-gem"></i>
+                                <span>Title: Generous</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Royal -->
+                    <div class="achievement-card" data-category="gift">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135823.png" alt="Royal Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge advanced">Tier 5</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Royal</h3>
+                            <p class="achievement-desc">Kedermawanan tingkat kerajaan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>10000 robux diberi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura royal">Royal Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Glorious -->
+                    <div class="achievement-card" data-category="gift">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135793.png" alt="Glorious Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge expert">Tier 6</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Glorious</h3>
+                            <p class="achievement-desc">Gemilang dalam memberi</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>50000 robux diberi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura glorious">Glorious Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Luxurious -->
+                    <div class="achievement-card" data-category="gift">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135775.png" alt="Luxurious Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge master">Tier 7</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Luxurious</h3>
+                            <p class="achievement-desc">Mewah dalam kedermawanan</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>100000 robux diberi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura luxurious">Luxurious Aura</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Majesty -->
+                    <div class="achievement-card" data-category="gift">
+                        <div class="card-header">
+                            <div class="achievement-image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135750.png" alt="Majesty Achievement">
+                            </div>
+                            <div class="achievement-tier">
+                                <span class="tier-badge legendary">Tier 8</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="achievement-title">Majesty</h3>
+                            <p class="achievement-desc">Yang Mulia sang Pemberi</p>
+                            <div class="achievement-target">
+                                <i class="fas fa-bullseye"></i>
+                                <span>500000 robux diberi</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="achievement-reward">
+                                <i class="fas fa-sparkles"></i>
+                                <span class="aura majesty">Majesty Aura</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="quick-links">
+            <div class="links-container">
+                <h3><i class="fas fa-exchange-alt"></i> Tautan Cepat</h3>
+                <div class="links-grid">
+                    <a href="achievements.html" class="quick-link">
+                        <div class="link-icon">
+                            <i class="fas fa-list-alt"></i>
+                        </div>
+                        <div class="link-content">
+                            <h4>Daftar Lengkap</h4>
+                            <p>Lihat achievement dengan detail lengkap dan progress</p>
+                        </div>
+                    </a>
+                    
+                    <a href="index.html#faq" class="quick-link">
+                        <div class="link-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <div class="link-content">
+                            <h4>FAQ</h4>
+                            <p>Pertanyaan umum tentang achievement</p>
+                        </div>
+                    </a>
+                    
+                    <a href="./behavior-point.html" class="quick-link">
+                        <div class="link-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="link-content">
+                            <h4>Kalkulator BP</h4>
+                            <p>Hitung Behavior Point Anda</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-microphone-alt"></i>
+                <span>Indo Voice</span>
+            </div>
+            <p class="footer-description">Galeri Achievement - Visual Lengkap Semua Pencapaian</p>
+            
+            <div class="footer-info">
+                <div class="info-item">
+                    <i class="fas fa-images"></i>
+                    <p>50+ Achievement</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-layer-group"></i>
+                    <p>4 Kategori</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-trophy"></i>
+                    <p>14 Tingkatan</p>
+                </div>
+            </div>
+            
+            <div class="footer-credits">
+                <p>© <span id="currentYear"></span> Indo Voice. Semua hak dilindungi.</p>
+                <p class="credit-note">Galeri ini menampilkan semua achievement yang tersedia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="./achievements.js"></script>
+</body>
+</html>
